@@ -1,6 +1,7 @@
 import { CheckCircle, ChevronDown, InfoIcon } from "lucide-react";
 import { FC } from "react";
 import TagCards from "./TagCards";
+import RedirectionTags from "./RedirectionTags";
 
 interface HeaderProps {}
 
@@ -36,6 +37,15 @@ const Header: FC<HeaderProps> = ({}) => {
         <TagCards text="Build Supplies" />
         <TagCards text="Tooling" />
         <TagCards text="BlueHosting" />
+      </div>
+
+      {/* links to redirect */}
+      <div className="flex gap-2 mb-5 text-[#727D87] px-3 text-[10px] md:px-0 md:text-[13px] ">
+        <RedirectionTags text="Home" />
+        <RedirectionTags text="Hosting for all" />
+        <RedirectionTags text="Hosting" />
+        <RedirectionTags text="Hosting6" />
+        <RedirectionTags text="Hosting5" end />
       </div>
     </section>
   );
