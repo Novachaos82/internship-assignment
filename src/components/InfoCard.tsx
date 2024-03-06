@@ -91,10 +91,10 @@ const InfoCard: FC<InfoCardProps> = ({
     return stars;
   };
   return (
-    <div className=" relative mx-auto max-w-[1024px] bg-white rounded-xl flex gap-10 shadow-md p-10">
+    <div className=" relative mx-auto max-w-[1024px] bg-white rounded-xl flex flex-col md:flex-row gap-10 shadow-md p-10">
       {/* choice hightlights */}
       {ChoiceHightlight ? (
-        <div className="absolute -top-2 -left-2 bg-[#FF7724] text-white p-2 rounded-r-xl flex gap-2 text-[16px]">
+        <div className="absolute -top-2 -left-2 bg-[#FF7724] text-white p-2 rounded-r-xl flex gap-2  text-[10px] md:text-[16px]">
           <Trophy width={20} height={20} />
           {ChoiceHightlight}
         </div>
@@ -114,7 +114,7 @@ const InfoCard: FC<InfoCardProps> = ({
       {/* description */}
       <div className="flex flex-col  ">
         <div className="flex flex-col">
-          <h1 className="text-[#4B5665] text-[16px] font-bold">
+          <h1 className="text-[#4B5665] text-[12px] md:text-[16px] font-bold">
             {Heading ? Heading : "WixPro 72-Inch Responsive Website Builder-"}
 
             <span className="text-[#626E79] font-light">
@@ -126,7 +126,7 @@ const InfoCard: FC<InfoCardProps> = ({
         </div>
         {/* hightlights */}
         <div>
-          <h1 className="text-[#4B5665] text-[16px] font-bold">
+          <h1 className="text-[#4B5665] text-[10px] md:text-[16px] font-bold">
             Main highlights
           </h1>
           {showMore ? (
@@ -136,7 +136,7 @@ const InfoCard: FC<InfoCardProps> = ({
                   {HighlightsPoints?.map((point: any, index: any) => (
                     <div
                       key={index}
-                      className="flex gap-2 items-center text-[16px]"
+                      className="flex gap-2 items-center  text-[10px] md:text-[16px]"
                     >
                       <span className="bg-white text-[#1B88F4] p-1 rounded-[4px]">
                         {point.rating}
@@ -148,12 +148,12 @@ const InfoCard: FC<InfoCardProps> = ({
                 </div>
               </div>
 
-              <div className="flex gap-2 flex-col">
+              <div className="flex gap-2 flex-col  text-[10px] md:text-[16px]">
                 Why we love it
                 {BenefitPoints?.map((point: any, index: any) => (
                   <div
                     key={index}
-                    className="flex gap-2 items-center text-[16px]"
+                    className="flex gap-2 items-center  text-[10px] md:text-[16px]"
                   >
                     <CheckCircle2Icon fill="#EBF5FF" strokeWidth={1} />
 
@@ -164,7 +164,7 @@ const InfoCard: FC<InfoCardProps> = ({
             </div>
           ) : (
             <div>
-              <p className="pl-4 text-[#4B5665] text-[16px]">
+              <p className="pl-4 text-[#4B5665]  text-[10px] md:text-[16px]">
                 {MainHighlights
                   ? MainHighlights
                   : `[What You Get]: Receive the WixPro website builder suite, access to
@@ -177,7 +177,7 @@ const InfoCard: FC<InfoCardProps> = ({
           {/* Highlight points */}
 
           <div
-            className="flex text-[#1B88F4] gap-2 items-center hover:cursor-pointer pt-5 max-w-fit"
+            className="flex text-[#1B88F4] text-[10px] md:text-[16px]  gap-2 items-center hover:cursor-pointer pt-5 max-w-fit"
             onClick={toggleShowMore}
           >
             <p>Show {showMore ? "less" : "more"}</p>
@@ -186,16 +186,18 @@ const InfoCard: FC<InfoCardProps> = ({
         </div>
       </div>
       {/* rating */}
-      <div className="flex flex-col justify-end items-center">
-        <div className="absolute top-0 bg-[#F3F9FF] w-[135px] h-[118px] flex flex-col items-center justify-center rounded-b-xl">
-          <p className="text-[#074786] text-[32px]">{rating ? rating : 9.5}</p>
-          <p className="text-[#074786] text-[14px]">
+      <div className="flex flex-col gap-4 md:gap-0 justify-end items-center">
+        <div className=" md:absolute top-0 bg-[#F3F9FF] w-[135px] h-[118px] flex flex-col items-center justify-center rounded-xl md:rounded-t-none md:rounded-b-xl">
+          <p className="text-[#074786] md:text-[32px]">
+            {rating ? rating : 9.5}
+          </p>
+          <p className="text-[#074786] text-[10px] md:text-[14px]">
             {Feedback ? Feedback : "Exceptional"}
           </p>
           <div className="flex">{renderStars()}</div>
         </div>
         <div>
-          <button className="bg-[#1B88F4] text-white rounded-xl w-[232px] h-[40px]">
+          <button className="bg-[#1B88F4] text-white rounded-xl  w-[232px] h-[40px]">
             View
           </button>
         </div>

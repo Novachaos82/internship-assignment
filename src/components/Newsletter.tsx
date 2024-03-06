@@ -4,12 +4,12 @@ interface NewsletterProps {}
 
 const Newsletter: FC<NewsletterProps> = ({}) => {
   return (
-    <div className="flex justify-between my-10 items-center">
-      <div className="text-[32px] text-[#5C6874] max-w-[40%]">
+    <div className="max-w-[1024px] mx-auto flex gap-2 md:gap-0 flex-col md:flex-row justify-between my-10 items-center ">
+      <div className="md:text-[32px] text-[#5C6874] md:max-w-[40%]">
         Sign up and get exclusive special deals
       </div>
 
-      <div className="flex text-[14px]">
+      <div className="flex text-xs md:text-[14px]">
         <input
           type="text"
           placeholder="Enter your email address..."

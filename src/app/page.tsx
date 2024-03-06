@@ -125,13 +125,16 @@ export default function Home() {
         <Header />
       </div>
       <div>
-        <div className="flex  flex-col gap-10">
+        <div className="flex  flex-col gap-10 px-5 md:px-0">
           {infoCardData.map((data, index) => (
             <InfoCard key={index} {...data} />
           ))}
         </div>
       </div>
-      <div className="max-w-[1024px] mx-auto flex justify-between my-10">
+      <div className="max-w-[1024px] mx-auto text-[#2C384A] md:text-[32px] my-10 px-5 md:px-0">
+        Related deals you might like for
+      </div>
+      <div className="max-w-[1024px] mx-auto flex justify-center gap-3 my-10 flex-wrap">
         <DealsCard
           title="Webbuilder 1"
           description="Computer  Modern clasic with wix support"
@@ -143,7 +146,7 @@ export default function Home() {
         <DealsCard />
         <DealsCard />
       </div>
-      <div className="max-w-[1024px] mx-auto">
+      <div className="">
         <Newsletter />
       </div>
     </main>

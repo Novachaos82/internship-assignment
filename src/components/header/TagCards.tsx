@@ -9,7 +9,7 @@ const TagCards: FC<TagCardsProps> = ({ text, className, ...props }) => {
   return (
     <div
       className={cn(
-        "bg-white text-[13px] text-[#4B5665] min-w-[105px] rounded-xl px-[16px] py-[8px] w-fit",
+        "bg-white text-[13px] text-[#4B5665] md:min-w-[105px] rounded-xl px-[16px] py-[8px] w-fit",
         className
       )}
     >

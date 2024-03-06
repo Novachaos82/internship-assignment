@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
+import MobileNavbar from "@/components/MobileNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +22,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className + " bg-[#FBFCFD]"}>
         <Navbar />
+
+        <MobileNavbar />
+
         {children}
-        <Footer />
+        <div className="hidden md:block">
+          <Footer />
+        </div>
       </body>
     </html>
   );

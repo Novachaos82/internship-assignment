@@ -52,7 +52,7 @@ const DealsCard: FC<DealsCardProps> = ({
         <div className="flex justify-center  text-[16px] text-[#626E79] font-semibold ">
           <p>{title ? title : "Webbuilder 1"}</p>
         </div>
-        <div className="text-[16px] text-[#626E79] leading-[24px] [word-spacing:5px]">
+        <div className=" text-[16px] text-[#626E79] leading-[24px] [word-spacing:5px]">
           {description
             ? description
             : "Computer Modern clasic with wix support"}
