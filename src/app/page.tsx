@@ -127,7 +127,7 @@ export default function Home() {
       <div>
         <div className="flex  flex-col gap-10 px-5 md:px-0">
           {infoCardData.map((data, index) => (
-            <InfoCard key={index} {...data} />
+            <InfoCard key={index} index={index} {...data} />
           ))}
         </div>
       </div>

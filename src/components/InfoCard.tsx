@@ -25,6 +25,7 @@ interface InfoCardProps {
   ChoiceHightlight?: string;
   BenefitPoints?: { text: string }[];
   HighlightsPoints?: { rating: number; text: string }[];
+  index: number;
 }
 
 const InfoCard: FC<InfoCardProps> = ({
@@ -37,6 +38,7 @@ const InfoCard: FC<InfoCardProps> = ({
   ChoiceHightlight,
   BenefitPoints,
   HighlightsPoints,
+  index,
 }) => {
   const [showMore, setShowMore] = useState(false);
 
@@ -101,6 +103,10 @@ const InfoCard: FC<InfoCardProps> = ({
       ) : (
         ""
       )}
+
+      <div className="absolute top-14 -left-4  bg-white border-[#E1E4E6] border-2 text-black p-4 rounded-full flex gap-2  text-[16px] w-[20px] h-[20px] items-center justify-center">
+        {index}
+      </div>
 
       {/* Image */}
       <div className="flex">
