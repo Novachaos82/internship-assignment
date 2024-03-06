@@ -105,7 +105,7 @@ const InfoCard: FC<InfoCardProps> = ({
       )}
 
       <div className="absolute top-14 -left-4  bg-white border-[#E1E4E6] border-2 text-black p-4 rounded-full flex gap-2  text-[16px] w-[20px] h-[20px] items-center justify-center">
-        {index}
+        {index + 1}
       </div>
 
       {/* Image */}
